@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+#grid { 	/* Create a 6 x 6 grid of squares to represent the game board */
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+    gap: 2px;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue; /* signifies water and unselected sqaure */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.hit { background-color: red; } /* colored red means it was hit */
+.miss { background-color: grey; } /* colored grey means a miss */
+.ship { background-color: lightcoral;} /*revealed ships at end of the game */
